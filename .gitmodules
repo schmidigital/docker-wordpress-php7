@@ -1,3 +1,0 @@
-[submodule "data/www/wordpress"]
-	path = data/www/wordpress
-	url = git://github.com/schmidigital/wordpress
