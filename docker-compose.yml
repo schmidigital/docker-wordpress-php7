@@ -9,7 +9,7 @@ web:
   volumes:
     - ./nginx_conf:/etc/nginx/hosts.d
   environment: 
-    NGINX_GENERATE_DEFAULT_VHOST: true
+    NGINX_GENERATE_DEFAULT_VHOST: false
 web_container:  
   container_name: web_container
   image: schmidigital/docker-unison  
