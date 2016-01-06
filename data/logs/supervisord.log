@@ -1,0 +1,46 @@
+2015-12-30 16:38:55,573 CRIT Supervisor running as root (no user in config file)
+2015-12-30 16:38:55,573 WARN Included extra file "/etc/supervisor.d/nginx.conf" during parsing
+2015-12-30 16:38:55,573 WARN Included extra file "/etc/supervisor.d/php-fpm.conf" during parsing
+2015-12-30 16:38:55,587 INFO RPC interface 'supervisor' initialized
+2015-12-30 16:38:55,588 INFO supervisord started with pid 33
+2015-12-30 16:38:56,596 INFO spawned: 'nginx' with pid 36
+2015-12-30 16:38:56,601 INFO spawned: 'nginx-reload' with pid 37
+2015-12-30 16:38:56,604 INFO spawned: 'php-fpm' with pid 38
+2015-12-30 16:38:56,611 DEBG 'nginx' stderr output:
+2015/12/30 16:38:56 [notice] 36#0: using the "epoll" event method
+
+2015-12-30 16:38:56,612 DEBG 'nginx' stderr output:
+2015/12/30 16:38:56 [notice] 36#0: nginx/1.8.0
+
+2015-12-30 16:38:56,612 DEBG 'nginx' stderr output:
+2015/12/30 16:38:56 [notice] 36#0: built by gcc 4.8.2 20140120 (Red Hat 4.8.2-16) (GCC) 
+
+2015-12-30 16:38:56,612 DEBG 'nginx' stderr output:
+2015/12/30 16:38:56 [notice] 36#0: OS: Linux 4.1.12-boot2docker
+
+2015-12-30 16:38:56,613 DEBG 'nginx' stderr output:
+2015/12/30 16:38:56 [notice] 36#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+
+2015-12-30 16:38:56,614 DEBG 'nginx' stderr output:
+2015/12/30 16:38:56 [notice] 36#0: start worker processes
+
+2015-12-30 16:38:56,615 DEBG 'nginx' stderr output:
+2015/12/30 16:38:56 [notice] 36#0: start worker process 40
+
+2015-12-30 16:38:56,616 DEBG 'nginx' stderr output:
+2015/12/30 16:38:56 [notice] 36#0: start worker process 41
+
+2015-12-30 16:38:56,616 DEBG 'nginx' stderr output:
+2015/12/30 16:38:56 [notice] 36#0: start worker process 42
+
+2015-12-30 16:38:56,617 DEBG 'nginx' stderr output:
+2015/12/30 16:38:56 [notice] 36#0: start worker process 43
+
+2015-12-30 16:38:56,661 DEBG fd 14 closed, stopped monitoring <POutputDispatcher at 11407584 for <Subprocess at 10933888 with name php-fpm in state STARTING> (stdout)>
+2015-12-30 16:38:56,662 DEBG 'php-fpm' stderr output:
+[30-Dec-2015 16:38:56] WARNING: Nothing matches the include pattern '/data/conf/php-fpm-www-*.conf' from /etc/php-fpm.d/www.conf at line 19.
+
+2015-12-30 16:38:56,663 DEBG fd 18 closed, stopped monitoring <POutputDispatcher at 11407872 for <Subprocess at 10933888 with name php-fpm in state STARTING> (stderr)>
+2015-12-30 16:38:57,666 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-12-30 16:38:57,666 INFO success: nginx-reload entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-12-30 16:38:57,667 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

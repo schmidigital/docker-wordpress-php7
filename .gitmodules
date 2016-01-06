@@ -1,0 +1,3 @@
+[submodule "data/www/default"]
+	path = data/www/default
+	url = git://github.com/schmidigital/wordpress

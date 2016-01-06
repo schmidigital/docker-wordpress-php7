@@ -1,0 +1,41 @@
+web:
+  image: million12/nginx-php
+  volumes_from: 
+    - web_container
+  links:
+    - db
+  ports:
+    - "8000:80"
+  environment: 
+    NGINX_GENERATE_DEFAULT_VHOST: true
+web_container:  
+  container_name: web_container
+  image: schmidigital/docker-unison  
+  environment:  
+    - UNISON_VERSION=2.48.3 
+    - UNISON_DIR=/data 
+  volumes:
+    - /data
+  ports:  
+    - "5000:5000"
+db:
+  image: mysql
+  ports:
+    - "8001:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: wordpress
+    MYSQL_DATABASE: wordpress
+    MYSQL_USER: wordpress
+    MYSQL_PASSWORD: wordpress
+  volumes_from:  
+    - db_container
+db_container:  
+  container_name: db_container
+  image: schmidigital/docker-unison  
+  environment:  
+    - UNISON_VERSION=2.48.3  
+    - UNISON_DIR=/var/lib/mysql 
+  volumes:
+    - /var/lib/mysql
+  ports:  
+    - "5001:5000"

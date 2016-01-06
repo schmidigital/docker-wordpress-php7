@@ -1,0 +1,1 @@
+[30-Dec-2015 16:38:56] WARNING: Nothing matches the include pattern '/data/conf/php-fpm-www-*.conf' from /etc/php-fpm.d/www.conf at line 19.

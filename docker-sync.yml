@@ -1,0 +1,10 @@
+web_container:  
+  container_name: web_container
+  image: schmidigital/docker-unison  
+  environment:  
+    - UNISON_VERSION=2.48.3 
+    - UNISON_DIR=/data/www 
+  volumes:
+    - /data/www
+  ports:  
+    - "5000:5000"
