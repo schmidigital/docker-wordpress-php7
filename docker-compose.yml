@@ -2,34 +2,13 @@ web:
   image: million12/nginx-php
   volumes_from: 
     - web_container
+    - nginx_container
   links:
     - db
   ports:
-    - "8000:80"
-  volumes:
-    - ./nginx_conf:/etc/nginx/hosts.d
+    - "80:80"
   environment: 
-    NGINX_GENERATE_DEFAULT_VHOST: false
-web_container:  
-  container_name: web_container
-  image: schmidigital/docker-unison  
-  environment:  
-    - UNISON_VERSION=2.48.3 
-    - UNISON_DIR=/data 
-  volumes:
-    - /data
-  ports:  
-    - "5000:5000"
-nginx_container:  
-  container_name: nginx_container
-  image: schmidigital/docker-unison  
-  environment:  
-    - UNISON_VERSION=2.48.3 
-    - UNISON_DIR=/etc/nginx/hosts.d 
-  volumes:
-    - /etc/nginx/hosts.d 
-  ports:  
-    - "5002:5000"
+    NGINX_GENERATE_DEFAULT_VHOST: true
 db:
   image: mysql
   ports:
@@ -50,4 +29,4 @@ db_container:
   volumes:
     - /var/lib/mysql
   ports:  
-    - "5001:5000"
+    - "5002:5000"

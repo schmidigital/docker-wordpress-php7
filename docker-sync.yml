@@ -3,8 +3,18 @@ web_container:
   image: schmidigital/docker-unison  
   environment:  
     - UNISON_VERSION=2.48.3 
-    - UNISON_DIR=/data/www 
+    - UNISON_DIR=/data 
   volumes:
-    - /data/www
+    - /data
   ports:  
     - "5000:5000"
+nginx_container:  
+  container_name: nginx_container
+  image: schmidigital/docker-unison  
+  environment:  
+    - UNISON_VERSION=2.48.3 
+    - UNISON_DIR=/etc/nginx/hosts.d 
+  volumes:
+    - /etc/nginx/hosts.d 
+  ports: 
+    - "5001:5000"
